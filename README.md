@@ -1,32 +1,27 @@
 # SolidStart
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
-
-## Creating a project
+Open terminal:
 
 ```bash
-# create a new project in the current directory
-npm init solid@latest
-
-# create a new project in my-app
-npm init solid@latest my-app
+pnpm i
+pnpm build && pnpm start
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+In another terminal from the project directory:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm cypress open
 ```
 
-## Building
+- Choose `E2E Testing`
+- Select Chrome browser
+- Click Start E2E Testing in Chrome
+- Run `script-loader.spec.js`
+- Should succeed
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+Stop Headless Chrome using `Close` from Cypress app.
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
-
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+- Select Firefox flavored browser
+- Click Start E2E Testing in Firefox
+- Run `script-loader.spec.js`
+- It will fail after a few iterations.
